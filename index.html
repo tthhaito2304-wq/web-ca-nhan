@@ -1,69 +1,170 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trương Thị Hải - Giới thiệu bản thân</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trương Thị Hải | Personal Portfolio</title>
+    <meta name="description" content="Trang cá nhân của Trương Thị Hải - sinh viên Sư phạm Tin học." />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <img class="avatar" src="images/avatar.jpg" alt="Ảnh đại diện">
-        <h1>Trương Thị Hải</h1>
-        <p>Sinh viên Sư Phạm Tin Học</p>
-    </header>
+    <div class="page-shell">
+        <header class="topbar reveal">
+            <div class="brand" aria-label="logo">
+                <div class="brand-mark">HT</div>
+                <div class="brand-text">
+                    <h2>Trương Thị Hải</h2>
+                    <span>Personal Portfolio</span>
+                </div>
+            </div>
 
-    <main>
-        <section id="gioi-thieu">
-            <h2>Giới thiệu bản thân</h2>
-            <p>
-                Xin chào! Mình là Trương Thị Hải, hiện đang theo học ngành Sư Phạm Tin Học.
-                Mình yêu thích công nghệ, công tác giảng dạy và mong muốn trở thành một giáo viên tin học giỏi trong tương lai.
-            </p>
-            <ul>
-                <li><strong>Ngày sinh:</strong> 23/04/2005</li>
-                <li><strong>Quê quán:</strong> Quảng Yên - Thanh Hóa</li>
-                <li><strong>Lớp:</strong> K26 - Sư Phạm Tin Học</li>
-                <li><strong>Sở thích:</strong> Đọc sách, nghe nhạc, xem phim</li>
-            </ul>
-        </section>
+            <nav class="nav" aria-label="Điều hướng chính">
+                <a href="#trangchu" class="active">Trang chủ</a>
+                <a href="#thongtin">Thông tin</a>
+                <a href="#kynang">Kỹ năng</a>
+                <a href="#lienhe">Liên hệ</a>
+            </nav>
+        </header>
 
-        <section id="mang-xa-hoi">
-            <h2>Mạng xã hội</h2>
-            <ul class="lien-ket">
-                <li><a href="https://www.facebook.com/cogiaogenz.hamchoi/" target="_blank" rel="noopener">Facebook</a></li>
-                <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
-            </ul>
-        </section>
+        <main>
+            <section id="trangchu" class="hero reveal">
+                <div class="hero-arc" aria-hidden="true"></div>
+                <div class="hero-visual">
+                    <div class="orb orb-one"></div>
+                    <div class="orb orb-two"></div>
+                    <div class="image-frame">
+                        <img src="image.jpg" alt="Ảnh của Trương Thị Hải" />
+                    </div>
+                </div>
 
-        <section id="lien-he">
-            <h2>Liên hệ với mình</h2>
-            <form id="form-lien-he">
-                <p>
-                    <label for="ten">Họ và tên:</label><br>
-                    <input type="text" id="ten" placeholder="Nhập họ và tên" required>
-                </p>
+                <div class="hero-copy">
+                    <p class="eyebrow">XIN CHÀO, MÌNH LÀ</p>
+                    <h1>Trương Thị Hải</h1>
+                    <h2>Sinh viên Sư phạm Tin học</h2>
+                    <p class="lead">
+                        Mình là sinh viên ngành Sư phạm Tin học, yêu thích công nghệ, sáng tạo và tìm hiểu những điều mới mẻ trong học tập và đời sống.
+                    </p>
+                    <div class="cta-row">
+                        <a href="#thongtin" class="btn btn-primary">Tìm hiểu về mình</a>
+                        <a href="#lienhe" class="btn btn-secondary">Liên hệ</a>
+                    </div>
+                </div>
+            </section>
 
-                <p>
-                    <label for="mail">Email:</label><br>
-                    <input type="email" id="mail" placeholder="Nhập email" required>
-                </p>
+            <section id="thongtin" class="info reveal">
+                <div class="section-heading">
+                    <p>ABOUT ME</p>
+                    <h3>Thông tin cá nhân</h3>
+                </div>
 
-                <p>
-                    <label for="noidung">Lời nhắn:</label><br>
-                    <textarea id="noidung" rows="4" required></textarea>
-                </p>
+                <div class="info-layout">
+                    <div class="info-text">
+                        <h4>Xin chào! 👋</h4>
+                        <p>
+                            Mình là <strong>Trương Thị Hải</strong>, hiện đang học tập trong lĩnh vực công nghệ thông tin với niềm đam mê tạo ra những sản phẩm hữu ích, sáng tạo và dễ tiếp cận.
+                        </p>
+                        <p>
+                            Mình yêu thích tìm hiểu công nghệ, thiết kế web và đặc biệt là lĩnh vực giáo dục. Mình mong muốn kết hợp kiến thức công nghệ với phương pháp giảng dạy để tạo ra những trải nghiệm học tập hiệu quả và thú vị hơn.
+                        </p>
+                        <p>
+                            Ngoài thời gian học tập, mình thích nghe nhạc, xem phim, tìm hiểu những điều mới và làm việc cùng bạn bè.
+                        </p>
+                    </div>
 
-                <button type="submit">Gửi lời nhắn</button>
-                <p id="thong-bao" role="status" aria-live="polite"></p>
-            </form>
-        </section>
-    </main>
+                    <div class="info-list">
+                        <div class="info-row"><span>Họ và tên</span><strong>Trương Thị Hải</strong></div>
+                        <div class="info-row"><span>Ngày sinh</span><strong>12/09/2005</strong></div>
+                        <div class="info-row"><span>Quê quán</span><strong>Thanh Hóa</strong></div>
+                        <div class="info-row"><span>Trường</span><strong>Đại học Hồng Đức</strong></div>
+                        <div class="info-row"><span>Chuyên ngành</span><strong>Sư phạm Tin học</strong></div>
+                        <div class="info-row"><span>Sở thích</span><strong>Xem phim · Nghe nhạc · Du lịch</strong></div>
+                    </div>
+                </div>
+            </section>
 
-    <footer>
-        <p>&copy; 2026 - Trương Thị Hải</p>
-    </footer>
+            <section id="kynang" class="skills reveal">
+                <div class="section-heading">
+                    <p>MY SKILLS</p>
+                    <h3>Kỹ năng của mình</h3>
+                </div>
 
-    <script src="js/script.js"></script>
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <span class="skill-number">01</span>
+                        <h4>Kỹ năng giảng dạy</h4>
+                        <p>Có khả năng xây dựng và tổ chức hoạt động học tập hiệu quả, giúp học sinh tham gia tích cực hơn.</p>
+                    </article>
+                    <article class="skill-card">
+                        <span class="skill-number">02</span>
+                        <h4>Thiết kế bài giảng</h4>
+                        <p>Biết cách xây dựng slide, nội dung và hoạt động học tập theo hướng trực quan, dễ hiểu và thú vị.</p>
+                    </article>
+                    <article class="skill-card">
+                        <span class="skill-number">03</span>
+                        <h4>HTML &amp; CSS</h4>
+                        <p>Hiểu cơ bản về HTML, CSS và có thể tạo ra giao diện web đơn giản, rõ ràng, thân thiện với người dùng.</p>
+                    </article>
+                    <article class="skill-card">
+                        <span class="skill-number">04</span>
+                        <h4>JavaScript cơ bản</h4>
+                        <p>Biết cách tạo tương tác đơn giản, hiệu ứng nhẹ và xử lý sự kiện để trang web trông sống động hơn.</p>
+                    </article>
+                    <article class="skill-card">
+                        <span class="skill-number">05</span>
+                        <h4>Giao tiếp &amp; thuyết trình</h4>
+                        <p>Có khả năng diễn đạt ý tưởng rõ ràng, tự tin khi giao tiếp và thuyết trình trước nhiều người.</p>
+                    </article>
+                    <article class="skill-card">
+                        <span class="skill-number">06</span>
+                        <h4>Làm việc nhóm</h4>
+                        <p>Luôn sẵn sàng hợp tác, chia sẻ ý tưởng và cùng hoàn thành công việc với tinh thần trách nhiệm.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="lienhe" class="contact reveal">
+                <div class="section-heading center">
+                    <p>CONTACT ME</p>
+                    <h3>Kết nối với mình</h3>
+                    <p class="contact-note">Bạn có thể kết nối với mình qua các kênh dưới đây.</p>
+                </div>
+
+                <div class="contact-list">
+                    <a class="contact-card" href="https://www.facebook.com/cogiaogenz.hamchoi/" target="_blank" rel="noreferrer">
+                        <span class="icon">f</span>
+                        <div>
+                            <h4>Facebook</h4>
+                            <p>Kết nối với mình trên Facebook</p>
+                        </div>
+                        <span class="arrow">→</span>
+                    </a>
+
+                    <a class="contact-card" href="https://www.youtube.com/@haitruongthi1653" target="_blank" rel="noreferrer">
+                        <span class="icon">▶</span>
+                        <div>
+                            <h4>YouTube</h4>
+                            <p>Xem các video và kênh của mình</p>
+                        </div>
+                        <span class="arrow">→</span>
+                    </a>
+
+                    <a class="contact-card" href="mailto:truongthihai709@gmail.com">
+                        <span class="icon">@</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>Gửi email cho mình</p>
+                        </div>
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <p>© <span id="year"></span> Trương Thị Hải. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
