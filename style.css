@@ -1,4 +1,3 @@
-/* Màu sắc chủ đạo và màu nền */
 :root {
     --primary: #2563eb;
     --bg: #f5f7fa;
@@ -167,4 +166,219 @@ footer {
     padding: 20px;
     color: #444;
     background: #edf3ff;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   KHUNG CHÍNH
+========================= */
+
+.container {
+    width: 90%;
+    max-width: 700px;
+    margin: 60px auto;
+}
+
+
+/* =========================
+   PHẦN GIỚI THIỆU
+========================= */
+
+.profile {
+    text-align: center;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================
+   ẢNH CÁ NHÂN
+========================= */
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 25px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    border: 5px solid #2563eb;
+}
+
+
+/* =========================
+   TÊN
+========================= */
+
+.profile h1 {
+    font-size: 36px;
+    color: #2563eb;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   NGÀNH HỌC
+========================= */
+
+.major {
+    font-size: 20px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   GIỚI THIỆU NGẮN
+========================= */
+
+.intro {
+    max-width: 550px;
+    margin: auto;
+    color: #666;
+}
+
+
+/* =========================
+   LIÊN HỆ
+========================= */
+
+.contact {
+    margin-top: 30px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.contact h2 {
+    text-align: center;
+
+    color: #2563eb;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   TỪNG THÔNG TIN LIÊN HỆ
+========================= */
+
+.contact-item {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eee;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-item span {
+    font-weight: bold;
+
+    color: #555;
+}
+
+.contact-item a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    text-align: right;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+
+    background: #111827;
+
+    color: white;
+}
+
+
+/* =========================
+   ĐIỆN THOẠI
+========================= */
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .profile {
+        padding: 30px 20px;
+    }
+
+    .avatar {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile h1 {
+        font-size: 30px;
+    }
+
+    .major {
+        font-size: 17px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .contact-item a {
+        text-align: left;
+    }
+}}
