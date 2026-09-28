@@ -3,81 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Trương Thị Hải - Giới thiệu bản thân</title>
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+    <header>
+        <img class="avatar" src="c:\Users\Ngoc Son Computer\Downloads\avatar.jpg" alt="Ảnh đại diện">
+        <h1>Trương Thị Hải</h1>
+        <p>Sinh viên Sư Phạm Tin Học</p>
+    </header>
 
-    <!-- Phần giới thiệu chính -->
-    <main class="container">
-
-        <div class="profile">
-
-            <!-- Ảnh cá nhân -->
-            <div class="avatar">
-                <img src="image.jpg" alt="Ảnh của Trương Thị Hải">
-            </div>
-
-            <!-- Thông tin cá nhân -->
-            <h1>Trương Thị Hải</h1>
-
-            <p class="major">
-                Sinh viên ngành Sư phạm Tin học
+    <main>
+        <section id="gioi-thieu">
+            <h2>Giới thiệu bản thân</h2>
+            <p>
+                Xin chào! Mình là Trương Thị Hải, hiện đang theo học ngành Sư Phạm Tin Học.
+                Mình yêu thích công nghệ, công tác giảng dạy và mong muốn trở thành một giáo viên tin học giỏi trong tương lai.
             </p>
-
-            <p class="intro">
-                Xin chào! Mình là Trương Thị Hải.
-                Đây là trang web giới thiệu thông tin cá nhân của mình.
-            </p>
-
-        </div>
-
-
-        <!-- Thông tin liên hệ -->
-        <section class="contact">
-
-            <h2>Thông tin liên hệ</h2>
-
-            <div class="contact-item">
-                <span>Email</span>
-                <a href="mailto:truongthihai709@gmail.com">
-                    truongthihai709@gmail.com
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <span>Facebook</span>
-                <a href="https://www.facebook.com/cogiaogenz.hamchoi/"
-                   target="_blank">
-                    Facebook của tôi
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <span>YouTube</span>
-                <a href="https://www.youtube.com/@haitruongthi1653"
-                   target="_blank">
-                    Kênh YouTube của tôi
-                </a>
-            </div>
-
+            <ul>
+                <li><strong>Ngày sinh:</strong> 23/04/2005</li>
+                <li><strong>Quê quán:</strong> Quảng Yên - Thanh Hóa</li>
+                <li><strong>Lớp:</strong> K26 - Sư Phạm Tin Học</li>
+                <li><strong>Sở thích:</strong> Đọc sách, nghe nhạc, xem phim</li>
+            </ul>
         </section>
 
+        <section id="mang-xa-hoi">
+            <h2>Mạng xã hội</h2>
+            <ul class="lien-ket">
+                <li><a href="https://www.facebook.com/cogiaogenz.hamchoi/" target="_blank" rel="noopener">Facebook</a></li>
+                <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+        </section>
+
+        <section id="lien-he">
+            <h2>Liên hệ với mình</h2>
+            <form id="form-lien-he">
+                <p>
+                    <label for="ten">Họ và tên:</label><br>
+                    <input type="text" id="ten" placeholder="Nhập họ và tên" required>
+                </p>
+
+                <p>
+                    <label for="mail">Email:</label><br>
+                    <input type="email" id="mail" placeholder="Nhập email" required>
+                </p>
+
+                <p>
+                    <label for="noidung">Lời nhắn:</label><br>
+                    <textarea id="noidung" rows="4" required></textarea>
+                </p>
+
+                <button type="submit">Gửi lời nhắn</button>
+                <p id="thong-bao"></p>
+            </form>
+        </section>
     </main>
 
-
-    <!-- Chân trang -->
     <footer>
-        <p>
-            © <span id="year"></span> Trương Thị Hải
-        </p>
+        <p>&copy; 2026 - Trương Thị Hải</p>
     </footer>
 
-
-    <script src="script.js"></script>
-
+    <script src="JS/script.js"></script>
 </body>
 </html>

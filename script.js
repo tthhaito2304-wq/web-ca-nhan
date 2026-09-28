@@ -20,6 +20,3 @@ document.addEventListener("DOMContentLoaded", function () {
     form.reset();
   });
 });
-
-// Tự động cập nhật năm hiện tại
-document.getElementById("year").textContent = new Date().getFullYear();
