@@ -1,34 +1,38 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("form-lien-he");
-  const thongBao = document.getElementById("thong-bao");
-  const tenInput = document.getElementById("ten");
-  const loiNhanInput = document.getElementById("noidung");
+    const yearNode = document.getElementById("year");
+    if (yearNode) {
+        yearNode.textContent = new Date().getFullYear();
+    }
 
-  if (!form || !thongBao || !tenInput || !loiNhanInput) {
-    console.error("Không tìm thấy đầy đủ các thành phần của biểu mẫu liên hệ.");
-    return;
-  }
-
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    tenInput.setCustomValidity(tenInput.value.trim() ? "" : "Vui lòng nhập họ và tên.");
-    loiNhanInput.setCustomValidity(
-      loiNhanInput.value.trim() ? "" : "Vui lòng nhập nội dung lời nhắn."
+    const revealItems = document.querySelectorAll(".reveal");
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("is-visible");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.15 }
     );
 
-    if (!form.reportValidity()) {
-      thongBao.textContent = "Vui lòng kiểm tra lại thông tin đã nhập.";
-      return;
-    }
+    revealItems.forEach((item) => revealObserver.observe(item));
 
-    thongBao.textContent = "Thông tin hợp lệ, nhưng biểu mẫu chưa được kết nối để gửi email.";
-  });
+    const navLinks = document.querySelectorAll(".nav a");
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            navLinks.forEach((item) => item.classList.remove("active"));
+            link.classList.add("active");
+        });
+    });
 
-  form.addEventListener("input", function (event) {
-    if (event.target === tenInput || event.target === loiNhanInput) {
-      event.target.setCustomValidity("");
+    const heroVisual = document.querySelector(".hero-visual");
+    if (heroVisual) {
+        window.addEventListener("pointermove", (event) => {
+            const x = (event.clientX / window.innerWidth - 0.5) * 12;
+            const y = (event.clientY / window.innerHeight - 0.5) * 12;
+            heroVisual.style.transform = `translate(${x * 1.2}px, ${y * 1.2}px)`;
+        });
     }
-    thongBao.textContent = "";
-  });
 });
