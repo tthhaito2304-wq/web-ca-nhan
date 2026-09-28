@@ -1,11 +1,22 @@
-// Lấy các phần tử trên trang theo id
-const form = document.getElementById("form-lien-he");
-const thongBao = document.getElementById("thong-bao");
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("form-lien-he");
+  const thongBao = document.getElementById("thong-bao");
+  const tenInput = document.getElementById("ten");
 
-// Khi người dùng bấm nút "Gửi lời nhắn"
-form.addEventListener("submit", function (event) {
-    event.preventDefault(); // chặn không cho trang tải lại
-    const ten = document.getElementById("ten").value;
-    thongBao.textContent = "Cảm ơn " + ten + ", mình đã nhận được lời nhắn!";
-    form.reset(); // xóa trắng các ô đã nhập
+  if (!form || !thongBao || !tenInput) {
+    console.error("Không tìm thấy form, input tên hoặc ô thông báo.");
+    return;
+  }
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const ten = tenInput.value.trim();
+
+    thongBao.textContent = ten
+      ? "Cảm ơn " + ten + ", mình đã nhận được lời nhắn!"
+      : "Cảm ơn bạn, mình đã nhận được lời nhắn!";
+
+    form.reset();
+  });
 });
